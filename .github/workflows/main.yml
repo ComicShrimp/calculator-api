@@ -1,4 +1,4 @@
-name: Snotra CI
+name: Calculator API CI
 
 on:
   push:
