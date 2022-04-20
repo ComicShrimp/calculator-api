@@ -1,0 +1,16 @@
+version: "3.4"
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./docker/api-dev.dockerfile
+    container_name: calculator_api
+    restart: unless-stopped
+    ports:
+      - ${DOCKER_WEB_PORT-7000}:80
+    volumes:
+      - .:/usr/src/app:z
+    depends_on:
+      - database
+    environment:
+      MODULE_NAME: calculator-api.main

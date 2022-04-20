@@ -6,7 +6,9 @@ authors = ["Mário Victor Ribeiro Silva <mariovictorrs@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.8"
+fastapi = "^0.75.2"
+pydantic = "^1.9.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.3.0"
