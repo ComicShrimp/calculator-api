@@ -29,25 +29,25 @@ jobs:
         run: |
           set -e
           set -x
-          mypy calculator-api
+          mypy calculator_api
 
       - name: Flake8
         run: |
           set -e
           set -x
-          flake8 calculator-api
+          flake8 calculator_api
 
       - name: Black
         run: |
           set -e
           set -x
-          black calculator-api --check
+          black calculator_api --check
 
       - name: Isort
         run: |
           set -e
           set -x
-          isort calculator-api --check-only
+          isort calculator_api --check-only
           
       - name: Vulture
         run: |
