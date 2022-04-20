@@ -13,4 +13,4 @@ services:
     depends_on:
       - database
     environment:
-      MODULE_NAME: calculator-api.main
+      MODULE_NAME: calculator_api.main

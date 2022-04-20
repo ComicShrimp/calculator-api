@@ -25,4 +25,4 @@ else
 fi
 
 # Start Uvicorn with live reload
-exec uvicorn --proxy-headers --forwarded-allow-ips='*' --reload --reload-dir=./calculator-api --host $HOST --port $PORT --log-level $LOG_LEVEL "$APP_MODULE"
+exec uvicorn --proxy-headers --forwarded-allow-ips='*' --reload --reload-dir=./calculator_api --host $HOST --port $PORT --log-level $LOG_LEVEL "$APP_MODULE"

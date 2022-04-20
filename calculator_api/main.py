@@ -2,8 +2,8 @@ from typing import List
 
 from fastapi import FastAPI, HTTPException, Query
 
-from .functions import operacao_soma
-from .models import Resultado
+from calculator_api.functions import operacao_soma
+from calculator_api.models import Resultado, Versao
 
 app = FastAPI(
     title="Calculator API",
@@ -13,8 +13,8 @@ app = FastAPI(
 
 
 @app.get("/")
-async def root() -> dict:
-    return {"versao": app.version}
+async def versao() -> Versao:
+    return Versao(versao=app.version)
 
 
 @app.get("/soma", response_model=Resultado)
