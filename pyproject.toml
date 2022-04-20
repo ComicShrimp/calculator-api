@@ -29,6 +29,6 @@ exclude = ["migrations/"]
 exclude = ["migrations/"]
 make_whitelist = true
 min_confidence = 80
-paths = ["backend/"]
+paths = ["calculator_api/"]
 sort_by_size = true
 ignore_names = ["cls"]
