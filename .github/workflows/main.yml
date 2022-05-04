@@ -54,3 +54,7 @@ jobs:
           set -e
           set -x
           vulture
+
+      - name: Testes Automatizados
+        run: |
+          pytest --verbose --cov=./
