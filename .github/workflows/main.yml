@@ -3,6 +3,9 @@ name: Calculator API CI
 on:
   push:
     branches: ['**']
+  
+  pull_request:
+    branches: ['**']
 
 jobs:
   API:
@@ -54,3 +57,7 @@ jobs:
           set -e
           set -x
           vulture
+
+      - name: Testes Automatizados
+        run: |
+          pytest --verbose --cov=./
