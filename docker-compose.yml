@@ -10,7 +10,5 @@ services:
       - ${DOCKER_WEB_PORT-7000}:80
     volumes:
       - .:/usr/src/app:z
-    depends_on:
-      - database
     environment:
       MODULE_NAME: calculator_api.main
