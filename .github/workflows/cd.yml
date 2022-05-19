@@ -1,0 +1,25 @@
+name: Calculator API CD
+
+on:
+  workflow_call:
+
+jobs:
+  Build:
+    name: Build Docker
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build imagem de produção
+        run: docker build -t "ghcr.io/comicshrimp/calculator-api:latest" -f ./docker/api-production.dockerfile .
+
+      - name: Login no Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload de Imagens para Container registry
+        run: |
+          docker push ghcr.io/comicshrimp/calculator-api:latest
