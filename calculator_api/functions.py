@@ -6,4 +6,8 @@ def operacao_soma(numeros: List[float]) -> float:
 
 
 def operacao_subtracao(numeros: List[float]) -> float:
-    return sum(numeros) * -1
+    total = numeros[0]
+    for numero in numeros[1:]:
+        total -= numero
+
+    return total
