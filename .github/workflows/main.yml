@@ -2,9 +2,13 @@ name: Calculator API CI/CD
 
 on:
   push:
-    branches: ['main']
+    branches: ['**']
 
 jobs:
   CI:
     name: "CI"
     uses: ./.github/workflows/ci.yml
+  
+  CD:
+    name: "CD"
+    uses: ./.github/workflows/cd.yml
