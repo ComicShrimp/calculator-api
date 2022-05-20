@@ -11,4 +11,5 @@ jobs:
   
   CD:
     name: "CD"
+    needs: ['CI']
     uses: ./.github/workflows/cd.yml
